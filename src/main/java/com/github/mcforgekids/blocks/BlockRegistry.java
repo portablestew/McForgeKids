@@ -1,6 +1,6 @@
-package com.example.mcforgekids.blocks;
+package com.github.mcforgekids.blocks;
 
-import com.example.mcforgekids.McForgeKids;
+import com.github.mcforgekids.McForgeKids;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -21,7 +21,7 @@ public class BlockRegistry {
     // Create a Deferred Register to hold Blocks which will all be registered under the "mcforgekids" namespace
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, McForgeKids.MODID);
 	
-    // Creates a new Block with the id "mcforgekids:example_block", combining the namespace and path
-    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
-    public static final RegistryObject<Block> EXAMPLE_BLOCK_2 = BLOCKS.register("example_block_2", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.SAND)));
+    // Creates a new Block with the id "mcforgekids:test_block", combining the namespace and path
+    public static final RegistryObject<Block> TEST_BLOCK = BLOCKS.register("test_block", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
+    public static final RegistryObject<Block> TEST_BLOCK_2 = BLOCKS.register("test_block_2", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.SAND)));
 }

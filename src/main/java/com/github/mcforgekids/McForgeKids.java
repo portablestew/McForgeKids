@@ -1,8 +1,8 @@
-package com.example.mcforgekids;
+package com.github.mcforgekids;
 
-import com.example.mcforgekids.blocks.BlockRegistry;
-import com.example.mcforgekids.creativetabs.CreativeTabs;
-import com.example.mcforgekids.items.ItemRegistry;
+import com.github.mcforgekids.blocks.BlockRegistry;
+import com.github.mcforgekids.creativetabs.CreativeTabs;
+import com.github.mcforgekids.items.ItemRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;

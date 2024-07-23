@@ -1,9 +1,9 @@
-package com.example.mcforgekids.creativetabs;
+package com.github.mcforgekids.creativetabs;
 
 import java.util.List;
 
-import com.example.mcforgekids.McForgeKids;
-import com.example.mcforgekids.items.ItemRegistry;
+import com.github.mcforgekids.McForgeKids;
+import com.github.mcforgekids.items.ItemRegistry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,13 +18,13 @@ public class CreativeTabs {
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "mcforgekids" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, McForgeKids.MODID);
 
-    // Creates a creative tab with the id "mcforgekids:example_tab" for the example item, that is placed after the combat tab
-    public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
+    // Creates a creative tab with the id "mcforgekids:test_tab" for the test items, that is placed after the combat tab
+    public static final RegistryObject<CreativeModeTab> TEST_TAB = CREATIVE_MODE_TABS.register("test_tab", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> ItemRegistry.EXAMPLE_ITEM.get().getDefaultInstance())
+            .icon(() -> ItemRegistry.TEST_CONSUMABLE_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-            	for (RegistryObject<Item> item : ItemRegistry.EXAMPLE_TAB_ITEMS) {
-            		output.accept(item.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event            		
+            	for (RegistryObject<Item> item : ItemRegistry.TEST_TAB_ITEMS) {
+            		output.accept(item.get()); // Add the item to the tab. For your own tabs, this method is preferred over the event            		
             	}
             }).build());
 
@@ -38,7 +38,7 @@ public class CreativeTabs {
         modEventBus.addListener(this::addCreative);
     }
 
-    // Add the example block items to the building blocks tab
+    // Add the block items to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
     	List<RegistryObject<Item>> items = ItemRegistry.CREATIVE_TAB_ITEMS.get(event.getTabKey());
