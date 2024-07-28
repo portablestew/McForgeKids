@@ -6,6 +6,7 @@ import com.github.mcforgekids.McForgeKids;
 import com.github.mcforgekids.items.ItemRegistry;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -20,6 +21,7 @@ public class CreativeTabs {
 
     // Creates a creative tab with the id "mcforgekids:test_tab" for the test items, that is placed after the combat tab
     public static final RegistryObject<CreativeModeTab> TEST_TAB = CREATIVE_MODE_TABS.register("test_tab", () -> CreativeModeTab.builder()
+    		.title(Component.translatable("itemGroup.mcforgekids.test_tab"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ItemRegistry.TEST_CONSUMABLE_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
