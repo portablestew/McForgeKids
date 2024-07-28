@@ -1,0 +1,1 @@
+Default Minecraft textures: https://github.com/InventivetalentDev/minecraft-assets/tree/1.21/assets/minecraft/textures
