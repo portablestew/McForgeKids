@@ -17,7 +17,7 @@ public class HailstormEntity extends Entity {
     private static final double SPAWN_RADIUS = 8;
     private static final double VERTICAL_SPEED = -1.5;
     private static final double TARGETED_AIM_STRENGTH = 0.08; // In lieu of solving quadratics
-    private static final double TARGETED_HORIZONTAL_VARIANCE = 0;//0.5;
+    private static final double TARGETED_HORIZONTAL_VARIANCE = 0.1;
     private static final double UNTARGETED_HORIZONTAL_VARIANCE = 0.5;
 
     private Entity owner;
