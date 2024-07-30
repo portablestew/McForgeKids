@@ -9,10 +9,17 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
+// Usage:
+//  - Create a new entity class extending BaseSpawnStormEntity.
+//  - Implement the spawnChild() function to return a new entity.
+//      - It will be automatically added to the level with the correct position and velocity.
+//      - Optionally use, if needed: getOwner, getLivingOwner, getTarget.
+//  - Override any of the constants tp alter spawn rate and positioning.
+//  - Don't forget to add the new class to the entity registry.
 public abstract class BaseSpawnStormEntity extends Entity {
     // Constants, but non-final and may be overwritten from child classes
     protected int numToSpawn = 400;
-    protected int stormDuration = 20; // Ticks
+    protected int stormDuration = 40; // Ticks
     protected double spawnHeight = 20;
     protected double spawnHeightVariance = 1;
     protected double spawnRadius = 8;
@@ -35,9 +42,8 @@ public abstract class BaseSpawnStormEntity extends Entity {
         super(entityType, level);
     }
 
-    protected BaseSpawnStormEntity(EntityType<?> entityType, Level level, Vec3 pos, Entity owner, Entity target) {
-        super(EntityRegistry.HAILSTORM_ENTITY_TYPE.get(), level);
-        setPos(pos);
+    protected BaseSpawnStormEntity(EntityType<?> entityType, Level level, Entity owner, Entity target) {
+        super(entityType, level);
         this.owner = owner;
         this.target = target;
     }

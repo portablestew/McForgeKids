@@ -38,6 +38,13 @@ public class ItemRegistry {
     // An arrow that spams snowballs where it lands
     public static final RegistryObject<Item> HAILSTORM_ARROW_ITEM = ITEMS.register("hailstorm_arrow", () -> new HailstormArrowItem(new Item.Properties()));
 
+    // An arrow that spawns a firestorm entity
+    public static final RegistryObject<Item> FIRESTORM_ARROW_ITEM = ITEMS.register("firestorm_arrow", () -> new FirestormArrowItem(new Item.Properties()));
+
+    // Note: when adding a new arrow type, don't forget:
+    //  - Add a locstring in the "lang" folder.
+    //  - Add the new item type to "arrows.json" in data tags.
+
     // List of items to include in existing creative mode tabs
     public static final Map<ResourceKey<CreativeModeTab>, List<RegistryObject<Item>>> CREATIVE_TAB_ITEMS = Map.of(
             CreativeModeTabs.BUILDING_BLOCKS, List.of(
@@ -49,6 +56,7 @@ public class ItemRegistry {
     // List of items to include in the TEST_TAB
     public static final List<RegistryObject<Item>> TEST_TAB_ITEMS = List.of(
             TEST_CONSUMABLE_ITEM,
-            HAILSTORM_ARROW_ITEM
+            HAILSTORM_ARROW_ITEM,
+            FIRESTORM_ARROW_ITEM
     );
 }

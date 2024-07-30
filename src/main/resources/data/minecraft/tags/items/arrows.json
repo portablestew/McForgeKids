@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "mcforgekids:hailstorm_arrow"
+    "mcforgekids:hailstorm_arrow",
+    "mcforgekids:firestorm_arrow"
   ]
 }
