@@ -21,4 +21,7 @@ public class EntityRegistry {
             () -> EntityType.Builder.of((EntityType.EntityFactory<HailstormArrowProjectile>) HailstormArrowProjectile::new, MobCategory.MISC).build("hailstorm_arrow"));
     public static final RegistryObject<EntityType<HailstormEntity>> HAILSTORM_ENTITY_TYPE = ENTITY_TYPES.register("hailstorm",
             () -> EntityType.Builder.of((EntityType.EntityFactory<HailstormEntity>) HailstormEntity::new, MobCategory.MISC).build("hailstorm"));
+
+    public static final RegistryObject<EntityType<FirestormEntity>> FIRESTORM_ENTITY_TYPE = ENTITY_TYPES.register("firestorm",
+            () -> EntityType.Builder.of((EntityType.EntityFactory<FirestormEntity>) FirestormEntity::new, MobCategory.MISC).build("firestorm"));
 }

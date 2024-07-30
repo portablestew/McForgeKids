@@ -29,8 +29,8 @@ public class HailstormArrowProjectile extends AbstractArrow {
         spawnedHailstorm = true;
 
         if (!level().isClientSide) {
-            HailstormEntity hailstorm = new HailstormEntity(level(), getX(), getY(), getZ(), getOwner(), target);
-            level().addFreshEntity(hailstorm);
+            BaseSpawnStormEntity storm = new HailstormEntity(level(), position(), getOwner(), target);
+            level().addFreshEntity(storm);
         }
     }
 
