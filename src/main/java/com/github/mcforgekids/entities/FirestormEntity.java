@@ -15,6 +15,7 @@ public class FirestormEntity extends BaseSpawnStormEntity {
     }
 
     protected Entity spawnChild() {
-        return new SmallFireball(level(), getLivingOwner(), getX(), getY(), getZ());
+        // Note: zeroes are projectile "power" (acceleration), not position
+        return new SmallFireball(level(), getLivingOwner(), 0, 0, 0);
     }
 }
