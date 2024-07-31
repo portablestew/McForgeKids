@@ -40,8 +40,10 @@ public abstract class BaseSpawnStormArrow extends AbstractArrow {
 
         if (!level().isClientSide) {
             Entity storm = spawnStorm(target);
-            storm.setPos(position());
-            level().addFreshEntity(storm);
+            if (storm != null) {
+                storm.setPos(position());
+                level().addFreshEntity(storm);
+            }
         }
     }
 
